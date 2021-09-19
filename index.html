@@ -1,0 +1,205 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ELECTRIC BILL CALCULATOR</title>
+        <script src="https://kit.fontawesome.com/f377f4f9d5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        .navbar{width:100%}
+        nav-link{color:aliceblue;text-decoration: none;}
+        nav-link:hover
+        {
+            background-color:ghostwhite;
+        }
+        .navbar-custom .navbar-brand , .navbar-custom .navbar-text{color:rgb(96, 236, 171);}
+        #b1{ color:rgb(193, 236, 75);}
+        #b6{color:red;}
+        #b7{color:snow;}
+        #b3{color:snow;text-decoration: none;}
+        #b5{background-color: teal;}
+        #b5:hover{background-color: thistle;}
+        #x1{color: blue;}
+        #l1{color:rgb(98, 233, 170)}
+        #c1{color:ghostwhite;}
+        #c1:hover{color:palevioletred;}
+        #m1{background-color: lightsteelblue;color: lightyellow;}
+        #m2:hover{color:blue;background-color: lightgreen;}
+        th{padding-left: 50px;padding: 20px;}
+        #btu{font-family:'Copperplate';box-shadow: rgb(103, 236, 230) 2px 2px 2px;}
+    </style>
+<body style="background-color: aqua;">
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="n1" style="height:50px"> 
+        <a class="navbar-brand" href="#" id="l1">
+          <img src="C:\Users\User\Desktop\images\image27.jpg" width=30 height=30 class="d-inline-block align-top">
+          ELECTRIC BILL CALCULATION
+        </a>
+        <div class="navbar-collapse" >
+           <ul class="navbar-nav mr-auto">
+            <li class="nav-item active ">
+              <a class="nav-link" id="c1" href="#" target="_blank"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="c1"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="c1" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Visit
+              </a>
+              <div class="dropdown-menu" id="m1" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" id="m2" href="#" target="_blank">feedback</a>
+                <a class="dropdown-item" id="m2" href="#" target="_blank">Login</a>
+                <a class="dropdown-item" id="m2" href="#" target="_blank">Index</a>
+              </div>
+            </li> 
+          </ul>
+          <button class="btn btn-dark mx-2"><a href="#" target="_blank" id="b1"><i class="fas fa-sign-in-alt"  fill="currentColor" fill-rule="evenodd"></i></a></button>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="b5" type="submit"><a href="https://www.google.com/" target="_blank" id="b3">Search</a></button>
+          </form>
+          <button class="btn btn-dark mx-2"><a href="#" target="_blank" id="b6"><i class="fas fa-sign-out-alt"></i></a></button>
+          <button class="btn btn-dark mx-2" style="height:50px" ><a href="#" target="_blank" id="b7"><i class="fas fa-shopping-cart"><p id="x1">GPay</p></i></a></button>
+        </div>
+    
+    </nav>
+   <hr>
+   <center>
+    <form method="post"  style="color: rgba(82, 194, 228, 0.966); background-color: rgb(16, 158, 146);width: 90%;height: 80%;">
+      <Fieldset style="width: 50%;background-color: rgb(8, 161, 110); ">
+          <legend style="display: center;color:rgb(245, 239, 237)"> ELECTRIC BILL CALCULATION</legend>
+    <table>
+     <tr>
+       <th><label for="tariff">TARIFF CHECK :</label></th>
+       <th><select name="tariff" id="tariff" style="width: 180px;">
+                 <option value="None">--- Selext a traiff ---</option>
+                 <option value="Domestic">Domestic</option>
+                 <option value="Commertial">Commertial</option>
+          </select></th>
+     </tr>
+     <tr>
+       <th><label for="unit1"> NO.OF UNITS CONSUMED : </label></th>
+       <th><input type="number" name="unit1" id="unit1"> </th>
+      </tr>
+      <tr>
+        <th><label for="load"> CONTRACTED LOAD (Not For Domestion Tariff) : </label></th>
+        <th><input type="number" name="load" id="load"> </th>
+       </tr>
+     <tr>
+      <th  style="text-align: center;" colspan="2"><input type="button" style='color:rgb(52, 13, 226);width:120px;background-color:rgb(247, 204, 89);' id="btu" value=" CALCULATE " onclick="eleValue()"></th>
+      </tr>
+     <tr>
+       <th style="color: rgb(39, 255, 20);">Consumed Unit : </th>
+       <th style="text-align: center;"><p style="background-color:whitesmoke;" id="con"></p></th>
+      </tr>
+     <tr>
+       <th style="color:rgb(138, 6, 6) ;">Electric Bill : </th>
+       <th style="text-align: center;"><p id="demo" style="background-color: whitesmoke;"></p></th>
+      </tr>
+     </table>
+   </form>
+  </Fieldset>
+  </center>
+   <hr>
+   <script LANGUAGE="JavaScript">
+     function eleValue()
+     {
+       document.getElementById("con").innerHTML = "";
+       document.getElementById("demo").innerHTML = "";
+       var unit=document.getElementById('unit1').value;
+       var c=document.getElementById('tariff').value;
+       alert("your input = "+ unit +" && You had choosen : "+c+" tariff");
+       if(c == "Domestic")
+       {
+          
+           if (unit>0 && unit<=100)
+				   {
+                 var x0 = 0.0;
+                 document.getElementById("con").innerHTML = ""+unit;
+                 document.getElementById("demo").innerHTML = ""+x0;
+			    	}
+			  	if (unit>=101 && unit<=200)
+			  	{
+                var x3 = unit*1;
+			        	var x1 =  (unit-100)*1.5;
+                var x12=x1+250;
+                var x6 = 50;
+                var x7 = x12-x6;
+				        var x4 = 30;			
+                var x8 = 10;
+			        	var x2 = 250;
+				        var x0 = Math.ceil(x1+x4-x8);
+                var x11=Math.abs(x0);
+                document.getElementById("con").innerHTML = ""+unit;
+                document.getElementById("demo").innerHTML = ""+x11;
+			   	}
+											
+				if (unit>=201 && unit<=500)
+				{
+                var x3 = unit*1;
+				        var x1 = (unit-200)*3 + 500;
+                var x6 = 50;
+                var x7 = x1-x6;
+				        var x4 = 30;			
+                var x8 = 0;
+				        var x2 = 250 ;
+				        var x0 = Math.ceil(x1+x4-x2-x6-x8);
+                document.getElementById("con").innerHTML = ""+unit;
+                document.getElementById("demo").innerHTML = ""+x0;
+				}
+												
+				if (unit>500)
+				{
+				        var x3 = unit*1;
+				        var x1 = (unit-500)*6.6+1730+250;
+                var x6 = 0;
+                var x7 = x1-x6;
+				        var x4 = 50;			
+                var x8 = 0;
+				        var x2 = 250 ;
+				        var x0 = Math.ceil(x1+x4-x2-x6-x8);
+                document.getElementById("con").innerHTML = ""+unit;
+                document.getElementById("demo").innerHTML = ""+x0;
+				 } 
+      }
+       else if(c == "Commertial")
+       {
+         var load = document.getElementById('load').value;
+          if (unit>0 && unit<=100)
+				  {
+                var x3 = unit*1;
+				        var x1 = unit*5;
+                var x6 = 0;
+                var x7 = x1-x6;
+				        var x4 = load*140;			
+                var x8 = 0;
+				        var x2 = (x1*0.05);
+				        var x0 =Math.ceil(x1+x4+x2);
+                document.getElementById("con").innerHTML = ""+unit;
+                document.getElementById("demo").innerHTML = ""+x0;	
+				  }
+				  if (unit>=101)
+				  {
+              var x3 = unit*1;var x5 = unit*0.1;
+				      var x1 = unit*8.05;
+              var x6 = 0;
+              var x7 = x1-x6;
+				      var x4 = load*140;			
+              var x8 = 0;
+				      var x2 = (x1*0.05);
+				      var x0 = Math.ceil(x1+x4+x2);
+              document.getElementById("con").innerHTML = ""+unit;
+              document.getElementById("demo").innerHTML = ""+x0;
+				  }
+       }
+    }
+   </script>
+</body>
+</html>
+    
